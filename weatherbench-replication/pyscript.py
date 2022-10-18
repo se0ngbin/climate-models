@@ -1,4 +1,6 @@
 from pathlib import Path
+import sys
+sys.path.insert(0, '/u/home/s/se0ngbin/climate_tutorial')
 
 path = Path("/u/scratch/s/se0ngbin/weatherbench")
 
