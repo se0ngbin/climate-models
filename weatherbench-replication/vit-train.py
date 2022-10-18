@@ -46,7 +46,7 @@ optim_kwargs = {
     "lr": 1e-4,
     "weight_decay": 1e-5,
     "warmup_epochs": 1,
-    "max_epochs": 5,
+    "max_epochs": 10,
 }
 
 model_module = load_model(name = "vit", task = "forecasting", model_kwargs = model_kwargs, optim_kwargs = optim_kwargs)
@@ -61,8 +61,9 @@ trainer = Trainer(
     seed = 0,
     accelerator = "gpu",
     precision = 16,
-    max_epochs = 5,
+    max_epochs = 10,
     # logger = WandbLogger(project = "climate_tutorial", name = "forecast-vit")
 )
 
 trainer.fit(model_module, data_module)
+trainer.test(model_module, data_module)
