@@ -1,0 +1,23 @@
+{
+    "os": "Linux-3.10.0-1160.76.1.el7.x86_64-x86_64-with-glibc2.17",
+    "python": "3.10.4",
+    "heartbeatAt": "2022-10-20T05:45:05.262508",
+    "startedAt": "2022-10-20T05:45:03.102810",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "gpu_count": 2,
+    "cpu_count": 16,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "CCAI Tutorial",
+    "git": {
+        "remote": "git@github.com:se0ngbin/climate-models.git",
+        "commit": "5d0da94ef7be09b2c4f26f3b6153ee44236811c8"
+    },
+    "email": "shannonsbpark@gmail.com",
+    "root": "/u/home/s/se0ngbin/climate-models",
+    "host": "g11",
+    "username": "se0ngbin",
+    "executable": "/u/home/s/se0ngbin/.conda/envs/climate-tools/bin/python"
+}

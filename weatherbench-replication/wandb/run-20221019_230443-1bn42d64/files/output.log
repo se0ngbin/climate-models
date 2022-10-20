@@ -1,0 +1,22 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.login() after wandb.init() has no effect.
+/u/home/s/se0ngbin/.conda/envs/climate-tools/lib/python3.10/site-packages/pytorch_lightning/loggers/wandb.py:352: UserWarning: There is a wandb run already in progress and newly created instances of `WandbLogger` will reuse this run. If this is not desired, call `wandb.finish()` before instantiating `WandbLogger`.
+  rank_zero_warn(
+/u/home/s/se0ngbin/.conda/envs/climate-tools/lib/python3.10/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:616: UserWarning: Checkpoint directory ./climate_tutorial/1bn42d64/checkpoints exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.login() after wandb.init() has no effect.
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.login() after wandb.init() has no effect.
+--- Logging error ---
+Traceback (most recent call last):
+  File "/u/home/s/se0ngbin/.conda/envs/climate-tools/lib/python3.10/logging/__init__.py", line 1104, in emit
+    self.flush()
+  File "/u/home/s/se0ngbin/.conda/envs/climate-tools/lib/python3.10/logging/__init__.py", line 1084, in flush
+    self.stream.flush()
+OSError: [Errno 5] Input/output error
+Call stack:
+  File "/u/home/s/se0ngbin/.conda/envs/climate-tools/lib/python3.10/threading.py", line 966, in _bootstrap
+    self._bootstrap_inner()
+  File "/u/home/s/se0ngbin/.conda/envs/climate-tools/lib/python3.10/threading.py", line 1009, in _bootstrap_inner
+    self.run()
+  File "/u/home/s/se0ngbin/.conda/envs/climate-tools/lib/python3.10/site-packages/ipykernel/parentpoller.py", line 34, in run
+    get_logger().warning("Parent appears to have exited, shutting down.")
+Message: 'Parent appears to have exited, shutting down.'
