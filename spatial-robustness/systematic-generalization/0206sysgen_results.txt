@@ -1,0 +1,89 @@
+Model: Resnet
+Epochs: 3
+Train-Test patches: same
+Train loss metric: lat_weighted_mse
+Validation loss metric: lat_weighted_rmse
+Test loss metric: lat_weighted_rmse
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                      Test metric                      ┃                     DataLoader 0                      ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│             test/acc_2m_temperature_day_3             │                          nan                          │
+│           test/w_rmse_2m_temperature_day_3            │                          nan                          │
+│ test_climatology_baseline/w_rmse_2m_temperature_day_3 │                  19.399045944213867                   │
+│ test_persistence_baseline/w_rmse_2m_temperature_day_3 │                  3.6447269916534424                   │
+└───────────────────────────────────────────────────────┴───────────────────────────────────────────────────────┘
+
+Model: Resnet
+Epochs: 3
+Train-Test patches: same
+Train loss metric: mse
+Validation loss metric: rmse
+Test loss metric: lat_weighted_rmse
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                      Test metric                      ┃                     DataLoader 0                      ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│             test/acc_2m_temperature_day_3             │                  0.9674269556999207                   │
+│           test/w_rmse_2m_temperature_day_3            │                  3.6854543685913086                   │
+│ test_climatology_baseline/w_rmse_2m_temperature_day_3 │                  19.399045944213867                   │
+│ test_persistence_baseline/w_rmse_2m_temperature_day_3 │                  3.6447269916534424                   │
+└───────────────────────────────────────────────────────┴───────────────────────────────────────────────────────┘
+
+Model: Resnet
+Epochs: 3
+Train-Test patches: different
+Train loss metric: mse
+Validation loss metric: rmse
+Test loss metric: lat_weighted_rmse
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                      Test metric                      ┃                     DataLoader 0                      ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│             test/acc_2m_temperature_day_3             │                 0.013146443292498589                  │
+│           test/w_rmse_2m_temperature_day_3            │                   17.51995086669922                   │
+│ test_climatology_baseline/w_rmse_2m_temperature_day_3 │                  15.018119812011719                   │
+│ test_persistence_baseline/w_rmse_2m_temperature_day_3 │                          nan                          │
+└───────────────────────────────────────────────────────┴───────────────────────────────────────────────────────┘
+
+Model: Resnet
+Epochs: 5
+Train-Test patches: different
+Train loss metric: lat_weighted_mse
+Validation loss metric: lat_weighted_rmse
+Test loss metric: lat_weighted_rmse
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                      Test metric                      ┃                     DataLoader 0                      ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│             test/acc_2m_temperature_day_3             │                          nan                          │
+│           test/w_rmse_2m_temperature_day_3            │                          nan                          │
+│ test_climatology_baseline/w_rmse_2m_temperature_day_3 │                  15.018119812011719                   │
+│ test_persistence_baseline/w_rmse_2m_temperature_day_3 │                          nan                          │
+└───────────────────────────────────────────────────────┴───────────────────────────────────────────────────────┘
+
+Model: Resnet
+Epochs: 5
+Train-Test patches: different
+Train loss metric: mse
+Validation loss metric: rmse
+Test loss metric: lat_weighted_rmse
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                      Test metric                      ┃                     DataLoader 0                      ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│             test/acc_2m_temperature_day_3             │                 -0.010506527498364449                 │
+│           test/w_rmse_2m_temperature_day_3            │                  18.674917221069336                   │
+│ test_climatology_baseline/w_rmse_2m_temperature_day_3 │                  15.018119812011719                   │
+│ test_persistence_baseline/w_rmse_2m_temperature_day_3 │                          nan                          │
+└───────────────────────────────────────────────────────┴───────────────────────────────────────────────────────┘
+
+Model: Resnet
+Epochs: 5
+Train-Test patches: different
+Train loss metric: mse
+Validation loss metric: rmse
+Test loss metric: rmse
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                  Test metric                  ┃                 DataLoader 0                  ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│         test/acc_2m_temperature_day_3         │             0.003002474782988429              │
+│           test/rmse_2m_temperature            │              25.852697372436523               │
+│ test_climatology_baseline/rmse_2m_temperature │               6350.34033203125                │
+│ test_persistence_baseline/rmse_2m_temperature │              27.463151931762695               │
+└───────────────────────────────────────────────┴───────────────────────────────────────────────┘
