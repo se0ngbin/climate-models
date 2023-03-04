@@ -1,8 +1,8 @@
 Model: Resnet
 Variable: T2M, Z500, T850
 Epochs: 64
-Train-Val patches: HighLat
-Test patches: LowLat
+Train-Val patches: HighLat (NORTH)
+Test patches: LowLat (SOUTH)
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 ┃                      Test metric                       ┃                      DataLoader 0                      ┃
 ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
@@ -20,8 +20,8 @@ Test patches: LowLat
 Model: Resnet
 Variable: T2M, Z500, T850
 Epochs: 64
-Train-Val patches: HighLat
-Test patches: HighLat
+Train-Val patches: HighLat (NORTH)
+Test patches: HighLat (NORTH)
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 ┃                      Test metric                       ┃                      DataLoader 0                      ┃
 ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
@@ -34,4 +34,199 @@ Test patches: HighLat
 │ test_persistence_baseline/w_rmse_2m_temperature_day_3  │                   5.238381619981866                    │
 │ test_persistence_baseline/w_rmse_geopotential_500_day… │                   1070.2873784228768                   │
 │ test_persistence_baseline/w_rmse_temperature_850_day_3 │                   5.185163388448407                    │
+└────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────┘
+
+Model: Resnet
+Variable: T2M, Z500, T850
+Epochs: 64
+Train-Val patches: LowLat (SOUTH)
+Test patches: LowLat (SOUTH)
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                      Test metric                       ┃                      DataLoader 0                      ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│             test/acc_2m_temperature_day_3              │                  0.7225136448164017                    │
+│            test/acc_geopotential_500_day_3             │                  0.231729638064783                     │
+│             test/acc_temperature_850_day_3             │                   0.39500681573228513                  │
+│            test/w_rmse_2m_temperature_day_3            │                   2.3615728194407364                   │
+│           test/w_rmse_geopotential_500_day_3           │                   914.1430406702219                    │
+│           test/w_rmse_temperature_850_day_3            │                   3.492052467122404                    │
+│ test_persistence_baseline/w_rmse_2m_temperature_day_3  │                   3.496629966136145                    │
+│ test_persistence_baseline/w_rmse_geopotential_500_day… │                   1176.168118227206                    │
+│ test_persistence_baseline/w_rmse_temperature_850_day_3 │                   4.738253556959821                    │
+└────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────┘
+
+Model: Resnet
+Variable: T2M, Z500, T850
+Epochs: 64
+Train-Val patches: LowLat (SOUTH)
+Test patches: HighLat (NORTH)
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                      Test metric                       ┃                      DataLoader 0                      ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│             test/acc_2m_temperature_day_3              │                  0.17224234987224837                   │
+│            test/acc_geopotential_500_day_3             │                  0.011608289025248185                  │
+│             test/acc_temperature_850_day_3             │                   0.1190285195390635                   │
+│            test/w_rmse_2m_temperature_day_3            │                   28.427666072137473                   │
+│           test/w_rmse_geopotential_500_day_3           │                   5282.494801888943                    │
+│           test/w_rmse_temperature_850_day_3            │                   25.600854837841236                   │
+│ test_persistence_baseline/w_rmse_2m_temperature_day_3  │                   5.2384544491138545                   │
+│ test_persistence_baseline/w_rmse_geopotential_500_day… │                   1070.294040310168                    │
+│ test_persistence_baseline/w_rmse_temperature_850_day_3 │                   5.185323166219537                    │
+└────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────┘
+
+Model: Resnet
+Variable: T2M, Z500, T850
+Epochs: 64
+Train-Val patches: HighLong (EAST)
+Test patches: LowLong (WEST)
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                      Test metric                       ┃                      DataLoader 0                      ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│             test/acc_2m_temperature_day_3              │                  0.5277197115778611                    │
+│            test/acc_geopotential_500_day_3             │                  0.37334450341087255                   │
+│             test/acc_temperature_850_day_3             │                   0.42624922530767073                  │
+│            test/w_rmse_2m_temperature_day_3            │                   5.364615036366985                    │
+│           test/w_rmse_geopotential_500_day_3           │                   1054.513388355289                    │
+│           test/w_rmse_temperature_850_day_3            │                   5.161510189831823                    │
+│ test_persistence_baseline/w_rmse_2m_temperature_day_3  │                   4.895944885412468                    │
+│ test_persistence_baseline/w_rmse_geopotential_500_day… │                   1091.5516424860357                   │
+│ test_persistence_baseline/w_rmse_temperature_850_day_3 │                   4.971260194113921                    │
+└────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────┘
+
+Model: Resnet
+Variable: T2M, Z500, T850
+Epochs: 64
+Train-Val patches: HighLong (EAST)
+Test patches: HighLong (EAST)
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                      Test metric                       ┃                      DataLoader 0                      ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│             test/acc_2m_temperature_day_3              │                  0.8006932181517573                    │
+│            test/acc_geopotential_500_day_3             │                  0.46613371191794745                   │
+│             test/acc_temperature_850_day_3             │                   0.5879098269190404                   │
+│            test/w_rmse_2m_temperature_day_3            │                   2.712887762149706                    │
+│           test/w_rmse_geopotential_500_day_3           │                   903.046182752993                     │
+│           test/w_rmse_temperature_850_day_3            │                   3.677299700327584                    │
+│ test_persistence_baseline/w_rmse_2m_temperature_day_3  │                   4.023915889415295                    │
+│ test_persistence_baseline/w_rmse_geopotential_500_day… │                   1177.1493770379534                   │
+│ test_persistence_baseline/w_rmse_temperature_850_day_3 │                   5.010049537888145                    │
+└────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────┘
+
+Model: Resnet
+Variable: T2M, Z500, T850
+Epochs: 64
+Train-Val patches: LowLong (WEST)
+Test patches: HighLong (EAST)
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                      Test metric                       ┃                      DataLoader 0                      ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│             test/acc_2m_temperature_day_3              │                  0.5914813202883842                    │
+│            test/acc_geopotential_500_day_3             │                  0.3577218667440319                    │
+│             test/acc_temperature_850_day_3             │                   0.43373167769638216                  │
+│            test/w_rmse_2m_temperature_day_3            │                   4.043858670374861                    │
+│           test/w_rmse_geopotential_500_day_3           │                   1005.1463531330375                   │
+│           test/w_rmse_temperature_850_day_3            │                   4.512369315469318                    │
+│ test_persistence_baseline/w_rmse_2m_temperature_day_3  │                   4.023951575316187                    │
+│ test_persistence_baseline/w_rmse_geopotential_500_day… │                   1177.1076644351315                   │
+│ test_persistence_baseline/w_rmse_temperature_850_day_3 │                   5.010030305161374                    │
+└────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────┘
+
+Model: Resnet
+Variable: T2M, Z500, T850
+Epochs: 64
+Train-Val patches: LowLong (WEST)
+Test patches: LowLong (WEST)
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                      Test metric                       ┃                      DataLoader 0                      ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│             test/acc_2m_temperature_day_3              │                  0.8532206306185478                    │
+│            test/acc_geopotential_500_day_3             │                  0.5535256111584926                    │
+│             test/acc_temperature_850_day_3             │                   0.7069278537756877                   │
+│            test/w_rmse_2m_temperature_day_3            │                   2.9367931525808912                   │
+│           test/w_rmse_geopotential_500_day_3           │                   814.3707647771205                    │
+│           test/w_rmse_temperature_850_day_3            │                   3.555254080875668                    │
+│ test_persistence_baseline/w_rmse_2m_temperature_day_3  │                   4.895662467382233                    │
+│ test_persistence_baseline/w_rmse_geopotential_500_day… │                   1091.5198245141873                   │
+│ test_persistence_baseline/w_rmse_temperature_850_day_3 │                   4.971060112078688                    │
+└────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────┘
+
+Model: Resnet
+Variable: T2M, Z500, T850
+Epochs: 64
+Train-Val patches: LowLatLowLong, HighLatHighLong (SW, NE)
+Test patches: LowLatHighLong, HighLatLowLong (SE, NW)
+Lat/Long Channels: ON
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                      Test metric                       ┃                      DataLoader 0                      ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│             test/acc_2m_temperature_day_3              │                  0.036357466131448746                  │
+│            test/acc_geopotential_500_day_3             │                 -0.001880466123111546                  │
+│             test/acc_temperature_850_day_3             │                 0.013667150400578976                   │
+│            test/w_rmse_2m_temperature_day_3            │                   18.364667892456055                   │
+│           test/w_rmse_geopotential_500_day_3           │                    3306.191162109375                   │
+│           test/w_rmse_temperature_850_day_3            │                   15.36323070526123                    │
+│ test_persistence_baseline/w_rmse_2m_temperature_day_3  │                   18.070907592773438                   │
+│ test_persistence_baseline/w_rmse_geopotential_500_day… │                    3417.07666015625                    │
+│ test_persistence_baseline/w_rmse_temperature_850_day_3 │                   15.643558502197266                   │
+└────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────┘
+
+
+Model: Resnet
+Variable: T2M, Z500, T850
+Epochs: 64
+Train-Val patches: LowLatLowLong, HighLatHighLong (SW, NE)
+Test patches: LowLatLowLong, HighLatHighLong (SW, NE)
+Lat/Long Channels: ON
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                      Test metric                       ┃                      DataLoader 0                      ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│             test/acc_2m_temperature_day_3              │                   0.9662021398544312                   │
+│            test/acc_geopotential_500_day_3             │                   0.9371971487998962                   │
+│             test/acc_temperature_850_day_3             │                   0.9424657821655273                   │
+│            test/w_rmse_2m_temperature_day_3            │                   3.1351208686828613                   │
+│           test/w_rmse_geopotential_500_day_3           │                    922.1593627929688                   │
+│           test/w_rmse_temperature_850_day_3            │                   3.979809045791626                    │
+│ test_persistence_baseline/w_rmse_2m_temperature_day_3  │                   4.530370235443115                    │
+│ test_persistence_baseline/w_rmse_geopotential_500_day… │                   1203.8702392578125                   │
+│ test_persistence_baseline/w_rmse_temperature_850_day_3 │                   5.319754600524902                    │
+└────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────┘
+
+Model: Resnet
+Variable: T2M, Z500, T850
+Epochs: 64
+Train-Val patches: LowLatHighLong, HighLatLowLong (SE, NW)
+Test patches: LowLatLowLong, HighLatHighLong (SW, NE)
+Lat/Long Channels: ON
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                      Test metric                       ┃                      DataLoader 0                      ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│             test/acc_2m_temperature_day_3              │                   -0.14837567508220673                 │
+│            test/acc_geopotential_500_day_3             │                  -0.19726602733135223                  │
+│             test/acc_temperature_850_day_3             │                  -0.18179096281528473                  │
+│            test/w_rmse_2m_temperature_day_3            │                   26.993515014648438                   │
+│           test/w_rmse_geopotential_500_day_3           │                    4402.0771484375                     │
+│           test/w_rmse_temperature_850_day_3            │                   21.357707977294922                   │
+│ test_persistence_baseline/w_rmse_2m_temperature_day_3  │                   5.240575313568115                    │
+│ test_persistence_baseline/w_rmse_geopotential_500_day… │                   1244.238037109375                    │
+│ test_persistence_baseline/w_rmse_temperature_850_day_3 │                   5.614290237426758                    │
+└────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────┘
+
+Model: Resnet
+Variable: T2M, Z500, T850
+Epochs: 64
+Train-Val patches: LowLatHighLong, HighLatLowLong (SE, NW)
+Test patches: LowLatHighLong, HighLatLowLong (SE, NW)
+Lat/Long Channels: ON
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                      Test metric                       ┃                      DataLoader 0                      ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│             test/acc_2m_temperature_day_3              │                   0.9525262117385864                   │
+│            test/acc_geopotential_500_day_3             │                   0.9213888645172119                   │
+│             test/acc_temperature_850_day_3             │                   0.9280509352684021                   │
+│            test/w_rmse_2m_temperature_day_3            │                    3.9877400398254395                  │
+│           test/w_rmse_geopotential_500_day_3           │                   1068.2647705078125                   │
+│           test/w_rmse_temperature_850_day_3            │                   4.413438320159912                    │
+│ test_persistence_baseline/w_rmse_2m_temperature_day_3  │                   17.36202049255371                    │
+│ test_persistence_baseline/w_rmse_geopotential_500_day… │                    3347.92724609375                    │
+│ test_persistence_baseline/w_rmse_temperature_850_day_3 │                   15.61850643157959                    │
 └────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────┘

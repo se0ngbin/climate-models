@@ -5,6 +5,10 @@ sys.path.insert(0, '/home/snandy/climate-learn-sys-gen/src/')
 from climate_learn.utils.datetime import Year, Days, Hours
 from climate_learn.data import DataModule
 
+
+dataset_path = "/data0/datasets/weatherbench/data/weatherbench/era5/5.625deg/"
+
+
 data_module = DataModule(
     dataset = "ERA5",
     task = "forecasting",
