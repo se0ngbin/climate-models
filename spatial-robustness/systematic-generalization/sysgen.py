@@ -6,7 +6,7 @@ from climate_learn.utils.datetime import Year, Days, Hours
 from climate_learn.data import DataModule
 
 
-dataset_path = "/data0/datasets/weatherbench/data/weatherbench/era5/5.625deg/"
+dataset_path = "/data0/datasets/weatherbench/data/weatherbench/era5/2.8125deg/"
 
 
 data_module = DataModule(
